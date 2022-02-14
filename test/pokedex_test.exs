@@ -38,7 +38,7 @@ defmodule PokedexTest do
 
 
   test "check not found" do
-  assert Pokedex.get_name("fake") == "not found"
-  assert Pokedex.get_id(9999) == "not found"
+  assert Pokedex.get_id("fake") == "not found"
+  assert Pokedex.get_name(9999) == "not found"
   end
 end
