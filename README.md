@@ -48,5 +48,3 @@ Extra:
 
   * Build a Graphql endpoint in Absinthe
   * Build a database schema for the pokemon in Ecto!
-
-    * Build a Phoenix Endpoint that responds to REST API calls

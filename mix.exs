@@ -51,6 +51,8 @@ defmodule Pokedex.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:tesla, ">= 1.0.0"},
+      {:absinthe, "~> 1.6"},
+      {:absinthe_plug, "~> 1.5"}
     ]
   end
 
