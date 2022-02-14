@@ -30,6 +30,7 @@ defmodule Pokedex do
 
   @doc "Get body from Tesla.get of pokemon "
   def get_all_details(id) do
+
     case get("/#{id}") do
       {:ok, %{status: 200, body: body}} -> body
       {:ok, %{status: 404}} -> "not found"
