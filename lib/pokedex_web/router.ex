@@ -14,10 +14,14 @@ defmodule PokedexWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", PokedexWeb do
-    pipe_through :browser
+  scope "/" do
+    pipe_through :api
 
-    get "/", PageController, :index
+    forward "/graphiql", Absinthe.Plug.GraphiQL,
+      schema: PokedexWeb.Schema,
+      interface: :simple,
+      context: %{pubsub: PokedexWeb.Endpoint}
+
   end
 
   # Other scopes may use custom stacks.
